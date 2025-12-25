@@ -83,13 +83,13 @@ export function Footer() {
               {/* Phone */}
               <li className="flex items-center gap-3">
                 <Phone size={14} className="mt-0.5" />
-                <span>+91 7770007179</span>
+                <a href="tel:+917770007179">+91 7770007179</a>
               </li>
 
               {/* Email */}
               <li className="flex items-center gap-3">
                 <Mail size={16} className="mt-1" />
-                <span>support@bimakart.in</span>
+                <a href="mailto:support@bimakart.in">support@bimakart.in</a>
               </li>
 
               {/* Address */}

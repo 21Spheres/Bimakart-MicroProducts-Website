@@ -1,0 +1,88 @@
+export function Footer() {
+  return (
+    <footer className="bg-[#1c1f26] text-gray-300">
+      <div className="max-w-7xl mx-auto px-10 py-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
+          {/* Brand + Hours */}
+          <div className="col-span-4">
+            <div className="mb-4">
+              <p className="text-white font-semibold text-base mb-2">
+                bimakart<span className="text-brand-orange">.in</span>
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                "Insure Today, Drive Safe Tomorrow." – Bimakart Center
+              </p>
+            </div>
+
+            <div className="mt-6">
+              <p className="text-white font-semibold mb-2">OPENING HOURS</p>
+
+              <div className="space-y-2 text-gray-400">
+                <div className="flex justify-between border-b border-gray-700 pb-1">
+                  <span>Mon - Fri</span>
+                  <span>10AM - 7PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Saturday</span>
+                  <span>10AM - 5PM</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <p className="text-white font-semibold mb-2">Social Media</p>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded bg-[#2a2e36]" />
+              </div>
+            </div>
+          </div>
+
+          {/* Insurance Products */}
+          <div className="col-span-2">
+            <p className="text-white font-semibold mb-4">Insurance Products</p>
+            <ul className="space-y-2 text-gray-400">
+              <li>Car Insurance</li>
+              <li>Bike Insurance</li>
+              <li>Health Insurance</li>
+              <li>Life Insurance</li>
+              <li>Commercial Insurance</li>
+            </ul>
+          </div>
+
+          {/* About Bimakart */}
+          <div className="col-span-2">
+            <p className="text-white font-semibold mb-4">About Bimakart</p>
+            <ul className="space-y-2 text-gray-400">
+              <li>Contact</li>
+              <li>Privacy &amp; Policy</li>
+              <li>Refund &amp; Cancellation</li>
+              <li>Terms &amp; Conditions</li>
+              <li>Testimonial</li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="col-span-4">
+            <p className="text-white font-semibold mb-4">Contact Info</p>
+
+            <ul className="space-y-3 text-gray-400 leading-relaxed">
+              <li> +91 7770007179</li>
+              <li>✉ support@bimakart.in</li>
+              <li>
+                1st Floor, Suman Education Society Campus,
+                <br />
+                Near General Karipappa Bridge, Moghdoot,
+                <br />
+                Rajendra Nagar, Borivali, Mumbai, Maharashtra 400066
+              </li>
+              <li>Incio Fintech Pvt. Ltd.</li>
+              <li>CIN No. U82990MH2023PTC412314</li>
+              <li>GSTIN No. 27AAHCS5688D1ZI</li>
+              <li>IRDAI Registration No: CA018</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

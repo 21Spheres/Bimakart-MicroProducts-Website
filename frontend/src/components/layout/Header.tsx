@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -16,12 +17,16 @@ export function Header() {
         </button>
 
         {/* CENTER: Logo */}
-        <div className="flex items-center gap-2">
+        <Link
+          to="/"
+          className="flex items-center gap-2 hover:opacity-90"
+          aria-label="Go to home"
+        >
           <img src="/logo.svg" alt="Bimakart" className="h-8 w-auto" />
           <span className="font-semibold text-lg">
             bimakart<span className="text-brand-orange">.in</span>
           </span>
-        </div>
+        </Link>
 
         {/* RIGHT: Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">

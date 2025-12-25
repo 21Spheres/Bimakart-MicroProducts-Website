@@ -38,12 +38,12 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <div
                   className="
-        w-8 h-8
-        rounded
-        bg-[#2a2e36]
-        flex items-center justify-center
-        text-white
-      "
+                    w-8 h-8
+                    rounded
+                  bg-[#2a2e36]
+                    flex items-center justify-center
+                  text-white
+                "
                 >
                   <FaWhatsapp size={18} />
                 </div>

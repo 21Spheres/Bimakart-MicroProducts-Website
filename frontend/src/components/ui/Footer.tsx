@@ -1,3 +1,6 @@
+import { Mail, MapPin, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+
 export function Footer() {
   return (
     <footer className="bg-[#1c1f26] text-gray-300">
@@ -31,8 +34,19 @@ export function Footer() {
 
             <div className="mt-6">
               <p className="text-white font-semibold mb-2">Social Media</p>
+
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded bg-[#2a2e36]" />
+                <div
+                  className="
+        w-8 h-8
+        rounded
+        bg-[#2a2e36]
+        flex items-center justify-center
+        text-white
+      "
+                >
+                  <FaWhatsapp size={18} />
+                </div>
               </div>
             </div>
           </div>
@@ -66,15 +80,31 @@ export function Footer() {
             <p className="text-white font-semibold mb-4">Contact Info</p>
 
             <ul className="space-y-3 text-gray-400 leading-relaxed">
-              <li> +91 7770007179</li>
-              <li>✉ support@bimakart.in</li>
-              <li>
-                1st Floor, Suman Education Society Campus,
-                <br />
-                Near General Karipappa Bridge, Moghdoot,
-                <br />
-                Rajendra Nagar, Borivali, Mumbai, Maharashtra 400066
+              {/* Phone */}
+              <li className="flex items-center gap-3">
+                <Phone size={14} className="mt-0.5" />
+                <span>+91 7770007179</span>
               </li>
+
+              {/* Email */}
+              <li className="flex items-center gap-3">
+                <Mail size={16} className="mt-1" />
+                <span>support@bimakart.in</span>
+              </li>
+
+              {/* Address */}
+              <li className="flex items-start gap-3">
+                <MapPin size={20} className="mt-1" />
+                <span>
+                  1st Floor, Suman Education Society Campus,
+                  <br />
+                  Near General Karipappa Bridge, Moghdoot,
+                  <br />
+                  Rajendra Nagar, Borivali, Mumbai, Maharashtra 400066
+                </span>
+              </li>
+
+              {/* Company info (no icon needed) */}
               <li>Incio Fintech Pvt. Ltd.</li>
               <li>CIN No. U82990MH2023PTC412314</li>
               <li>GSTIN No. 27AAHCS5688D1ZI</li>

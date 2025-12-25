@@ -1,3 +1,6 @@
+import { ShieldCheck } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+
 export function PolicyInfo() {
   return (
     <div className="text-white pr-6">
@@ -27,25 +30,26 @@ export function PolicyInfo() {
       {/* Coverage list */}
       <ul className="space-y-2 text-sm text-gray-200">
         <li className="flex items-start gap-2">
-          <span className="text-brand-orange">✔</span>
+          <ShieldCheck size={16} className="text-brand-orange mt-1" />
           Workplace Accident Protection
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-brand-orange">✔</span>
+          <ShieldCheck size={16} className="text-brand-orange mt-1" />
           Medical &amp; Hospitalization Expenses
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-brand-orange">✔</span>
+          <ShieldCheck size={16} className="text-brand-orange mt-1" />
           Disability &amp; Death Benefits
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-brand-orange">✔</span>
+          <ShieldCheck size={16} className="text-brand-orange mt-1" />
           Covers Employees &amp; Workers Together
         </li>
       </ul>
 
       {/* WhatsApp button */}
       <button className="mt-8 inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover px-4 py-2 rounded-md text-sm font-medium">
+        <FaWhatsapp size={18} className="mt-0.5" />
         Chat on Whatsapp
       </button>
     </div>

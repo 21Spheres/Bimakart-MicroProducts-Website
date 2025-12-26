@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import KartavyaPolicyPage from "./pages/KartavyaPolicyPage";
+import { ProductListingPage } from "./pages/ProductListingPage";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
 
       {/* Policy routes */}
       <Route path="/policies/kartavya" element={<KartavyaPolicyPage />} />
+      <Route path="/products" element={<ProductListingPage />} />
 
       {/* Fallback */}
       <Route path="*" element={<div>Page not found</div>} />

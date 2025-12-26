@@ -9,9 +9,7 @@ export function Footer() {
           {/* Brand + Hours */}
           <div className="col-span-4">
             <div className="mb-4">
-              <p className="text-white font-semibold text-base mb-2">
-                bimakart<span className="text-brand-orange">.in</span>
-              </p>
+              <img src="/logo.png" alt="Bimakart" className="h-10 w-auto mb-2" />
               <p className="text-gray-400 leading-relaxed">
                 "Insure Today, Drive Safe Tomorrow." – Bimakart Center
               </p>

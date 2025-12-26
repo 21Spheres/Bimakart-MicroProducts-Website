@@ -22,10 +22,7 @@ export function Header() {
           className="flex items-center gap-2 hover:opacity-90"
           aria-label="Go to home"
         >
-          <img src="/logo.svg" alt="Bimakart" className="h-8 w-auto" />
-          <span className="font-semibold text-lg">
-            bimakart<span className="text-brand-orange">.in</span>
-          </span>
+          <img src="/logo.png" alt="Bimakart" className="h-10 w-auto" />
         </Link>
 
         {/* RIGHT: Desktop nav */}

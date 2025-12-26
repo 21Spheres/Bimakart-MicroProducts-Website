@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { PolicyHero } from "@/components/policy/PolicyHero";
 import { TopActions } from "@/components/policy/TopActions";
-import { Footer } from "@/components/ui/Footer";
+import { Footer } from "@/components/layout/Footer";
 
 export default function KartavyaPolicyPage() {
   return (

@@ -2,7 +2,7 @@ import { Upload, FileSpreadsheet } from "lucide-react";
 
 export function TopActions() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex justify-end gap-3">
+    <div className="max-w-7xl mx-auto  sm:px-6 py-6 flex justify-end gap-3 SectionPaddingTop">
       {/* Upload Excel */}
       <button
         className="

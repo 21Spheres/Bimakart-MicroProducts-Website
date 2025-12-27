@@ -4,7 +4,7 @@ import { Select } from "@/components/ui/Select";
 
 export function BuyPolicyForm() {
   return (
-    <div className="bg-white rounded-xl p-4 sm:p-6 shadow-card">
+    <div className="bg-white rounded-xl p-4 sm:p-6 shadow-card ">
       <h3 className="text-lg font-semibold mb-1">Buy Kartavya Policy</h3>
       <p className="text-sm text-gray-500 mb-6">
         Fill in the details to proceed with Kartavya Policy.

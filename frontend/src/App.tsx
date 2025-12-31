@@ -1,16 +1,21 @@
 // @ts-check
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import KartavyaPolicyPage from "./pages/KartavyaPolicyPage";
 import { ProductListingPage } from "./pages/ProductListingPage";
-import DashboardComponent from "./components/DashboardComponent/DashboardComponent";
+import AgentDashboardComponent from "./components/DashboardAllComponents/AgentDashboardComponent/AgentDashboardComponent";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
 import "./App.css"
+import RouteDashboardComponents from "./components/DashboardAllComponents/RouteDashboardComponents/RouteDashboardComponents";
+import { AllModulesImports } from "./components/DashboardAllComponents/AllModulesImports/AllModulesImports";
 
 function App() {
+  const location = useLocation();
+  const isDashboardRoute = location.pathname.toLowerCase().startsWith("/dashboard");
+
   return (
     <>
-      <Header />
+      {!isDashboardRoute && <Header />}
       <Routes>
         {/* Default route */}
         <Route path="/" element={<Navigate to="/policies/kartavya" replace />} />
@@ -18,12 +23,17 @@ function App() {
         {/* Policy routes */}
         <Route path="/policies/kartavya" element={<KartavyaPolicyPage />} />
         <Route path="/products" element={<ProductListingPage />} />
-        <Route path="/dashboard" element={<DashboardComponent />} />
+        <Route path="/agent-dashboard" element={<AgentDashboardComponent />} />
+
+        {/* Dashboard routes - AllModulesImports handles routing based on URL path */}
+        <Route path="/dashboard/*" element={<RouteDashboardComponents />}>
+          <Route path="*" element={<AllModulesImports />} />
+        </Route>
 
         {/* Fallback */}
         <Route path="*" element={<div>Page not found</div>} />
       </Routes>
-      <Footer />
+      {!isDashboardRoute && <Footer />}
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Card, Typography, Select, Table, Progress, Button } from "antd";
+import { Row, Col, Card, Typography, Select, Table } from "antd";
 import {
     ClipboardList,
     Wallet,
@@ -98,7 +98,7 @@ const policyData = [
     },
 ];
 
-const DashboardComponent = () => {
+const AgentDashboardComponent = () => {
     const [activeFilter, setActiveFilter] = useState("1D");
 
     const timeFilters = ["1D", "1W", "1M", "Last month", "This quarter", "Last quarter", "This FY", "Last FY"];
@@ -169,12 +169,12 @@ const DashboardComponent = () => {
     );
 
     return (
-        <div className="dashboard-wrapper SectionPaddingTop SectionPaddingBottom">
-            <div className="Container">
+        <div className="dashboard-wrapper MainComponentWrapper SectionPaddingBottom">
+            <div>
                 {/* Header Section */}
                 <div className="dashboard-header">
                     <div className="dashboard-header-text">
-                        <Title level={2} className="SectionMainHeading">Agent Dashboard</Title>
+                        <div className="SectionMainHeading">Agent Dashboard</div>
                         <Text>Track your sales, revenue, and performance at a glance</Text>
                     </div>
                     <div className="time-filters">
@@ -309,4 +309,4 @@ const DashboardComponent = () => {
     );
 };
 
-export default DashboardComponent;
+export default AgentDashboardComponent;

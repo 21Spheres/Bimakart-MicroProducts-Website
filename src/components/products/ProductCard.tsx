@@ -4,12 +4,16 @@ import { MdOutlineHealthAndSafety } from "react-icons/md";
 interface Props {
   title: string;
   description: string;
+  policyIcon?: string;
+  policyIconUrl?: string;
   highlighted?: boolean;
 }
 
 export function ProductCard({
   title,
   description,
+  policyIcon,
+  policyIconUrl,
   highlighted = false,
 }: Props) {
   return (
@@ -30,7 +34,7 @@ export function ProductCard({
         {/* Avatar */}
         <div className="ImageContainer">
           <img
-            src="/policy-avatar.png"
+            src={policyIconUrl || policyIcon || "/policy-avatar.png"}
             alt={title}
           />
         </div>
@@ -48,7 +52,7 @@ export function ProductCard({
 
       {/* FOOTER CTA */}
       <Link
-        to="/policies/kartavya"
+        to={`/policies/kartavya/${title.replace(/\s+/g, '-')}`}
         className="
           mt-auto
           w-full
@@ -61,7 +65,7 @@ export function ProductCard({
           flex items-center justify-center
         "
       >
-       <MdOutlineHealthAndSafety size={18}/>&nbsp; Buy Now
+        <MdOutlineHealthAndSafety size={18} />&nbsp; Buy Now
       </Link>
     </div>
   );

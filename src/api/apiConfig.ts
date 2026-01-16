@@ -1,3 +1,4 @@
+
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import type { ProductsResponse } from '../types/product.types';
 
@@ -12,8 +13,11 @@ export const productsApi = createApi({
         getProducts: builder.query<ProductsResponse, void>({
             query: () => '/api/products',
         }),
+        downloadFile: builder.query<{ status: string; message: string; data: string }, string>({
+            query: (fileKey) => `/api/file/download?key=${fileKey}`,
+        }),
     }),
 });
 
 // Export hooks for usage in components
-export const { useGetProductsQuery } = productsApi;
+export const { useGetProductsQuery, useLazyDownloadFileQuery } = productsApi;
